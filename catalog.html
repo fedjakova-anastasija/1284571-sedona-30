@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Седона</title>
+</head>
+<body>
+<header>
+  <nav>
+    <a href="index.html">
+      <img src="https://via.placeholder.com/138x70" width="138" height="70" alt="Логотип городка Седона">
+    </a>
+    <ul>
+      <li><a href="blank.html">Информация</a></li>
+      <li><a href="blank.html">Фото и видео</a></li>
+      <li><a href="blank.html">Карта штата</a></li>
+      <li><a href="catalog.html">Гостиницы</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <h1>Гостиницы</h1>
+
+  <section>
+    <h2>Фильтр гостиниц</h2>
+    <form method="get" action="https://echo.htmlacademy.ru">
+      <fieldset>
+        <legend>Инфраструктура:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="swimming-pool" id="filter-swimming-pool" checked>
+            <label for="filter-swimming-pool">Бассейн</label>
+          </li>
+          <li>
+            <input type="checkbox" name="parking" id="filter-parking">
+            <label for="filter-parking">Парковка</label>
+          </li>
+          <li>
+            <input type="checkbox" name="wi-fi" id="filter-wi-fi">
+            <label for="filter-wi-fi">Wi-Fi</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Тип жилья:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="hotel" id="filter-hotel" checked>
+            <label for="filter-hotel">Гостиница</label>
+          </li>
+          <li>
+            <input type="checkbox" name="motel" id="filter-motel" checked>
+            <label for="filter-motel">Отель</label>
+          </li>
+          <li>
+            <input type="checkbox" name="apartment" id="filter-apartment" checked>
+            <label for="filter-apartment">Апартаменты</label>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>Стоимость в сутки (р):</legend>
+        от 0
+        <input type="range" id="price" name="price" value="0">
+        до 3000
+      </fieldset>
+      <button type="submit">Показать</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Найдено: 3</h2>
+    <p>Сортировка:</p>
+    <ul>
+      <li>
+        По цене
+      </li>
+      <li>
+        <a href="catalog.html">По типу</a>
+      </li>
+      <li>
+        <a href="index.html">По рейтингу</a>
+      </li>
+    </ul>
+    <img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка">
+    <img src="https://via.placeholder.com/11x10" width="11" height="10" alt="Сортировка">
+  </section>
+
+  <section>
+    <h2>Список гостиниц</h2>
+    <ul>
+      <li>
+        <img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Гостиница «Amara Resort & Spa»">
+
+        <div>
+          <h3>Amara Resort & Spa</h3>
+          <p>
+            <span>Гостиница</span>
+            от 4000 p.</p>
+          <button type="button">Подробнее</button>
+          <button type="button">Забронировать</button>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="Рейтинг «Amara Resort & Spa»">
+            </li>
+            <li>
+              <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="Рейтинг «Amara Resort & Spa»">
+            </li>
+            <li>
+              <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="Рейтинг «Amara Resort & Spa»">
+            </li>
+            <li>
+              <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="Рейтинг «Amara Resort & Spa»">
+            </li>
+            <li>
+              <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="Рейтинг «Amara Resort & Spa»">
+            </li>
+          </ul>
+          <p>Рейтинг: 8,5</p>
+        </div>
+
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Гостиница «Desert Quail Inn»">
+
+        <div>
+          <h3>Desert Quail Inn</h3>
+          <p>
+            <span>Мотель</span>
+            от 3000 p.</p>
+          <button type="button">Подробнее</button>
+          <button type="button">Забронировать</button>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="Рейтинг «Desert Quail Inn»">
+            </li>
+            <li>
+              <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="Рейтинг «Desert Quail Inn»">
+            </li>
+            <li>
+              <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="Рейтинг «Desert Quail Inn»">
+            </li>
+          </ul>
+          <p>Рейтинг: 8,9</p>
+        </div>
+
+      </li>
+      <li>
+        <img src="https://via.placeholder.com/135x90" width="135" height="90" alt="Гостиница «Amara Resort & Spa»">
+
+        <div>
+          <h3>Villas at Poco Diablo</h3>
+          <p>
+            <span>Апартаменты</span>
+            от 2000 p.</p>
+          <button type="button">Подробнее</button>
+          <button type="button">Забронировать</button>
+        </div>
+
+        <div>
+          <ul>
+            <li>
+              <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="Villas at Poco Diablo»">
+            </li>
+            <li>
+              <img src="https://via.placeholder.com/19x17" width="19" height="17" alt="Рейтинг «Villas at Poco Diablo»">
+            </li>
+          </ul>
+          <p>Рейтинг: 9,2</p>
+        </div>
+
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <section>
+    <h2>Как нас найти</h2>
+    <p>
+      #visitsedona<br>
+      Тел: <a href="tel:+74956660166">+7(495) 666-01-66</a>
+    </p>
+  </section>
+  <section>
+    <h2>Социальные сети</h2>
+    <ul>
+      <li>
+        <a href="#">Твиттер</a>
+      </li>
+      <li>
+        <a href="#">Фейсбук</a>
+      </li>
+      <li>
+        <a href="#">YouTube</a>
+      </li>
+    </ul>
+  </section>
+  <p>
+    Website by
+    <a href="https://htmlacademy.ru/intensive/htmlcss">
+      <img src="https://via.placeholder.com/115x41" width="115" height="41" alt="HTML Academy">
+    </a>
+  </p>
+</footer>
+</body>
+</html>
