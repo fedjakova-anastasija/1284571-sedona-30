@@ -112,19 +112,19 @@ img {
   padding: 0;
 }
 
-.site-navigation a {
+.site-navigation .site-navigation-link {
   color: var(--basic-black);
 }
 
-.site-navigation-current a {
+.site-navigation-current .site-navigation-link {
   color: var(--special-dark);
 }
 
-.site-navigation a:hover {
+.site-navigation .site-navigation-link:hover {
   color: var(--special-light);
 }
 
-.site-navigation a:focus {
+.site-navigation .site-navigation-link:focus {
   color: var(--basic-black);
   opacity: 0.3;
 }
@@ -245,7 +245,7 @@ img {
   background-color: var(--special-light-focus);
 }
 
-.button:focus span {
+.button:focus .button-name {
   opacity: 0.3;
 }
 
