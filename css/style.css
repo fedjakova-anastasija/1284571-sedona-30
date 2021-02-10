@@ -267,18 +267,25 @@ img {
 }
 
 .application-form {
-  min-width: 568px;
+  max-width: 568px;
 }
 
 .application-form-content {
-  padding: 55px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 55px;
 
 }
 
 .application-form h2 {
-  background-color: var(--basic-white);
-  padding: 35px;
+  padding: 30px;
   margin: 0;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--basic-white);
+  background-color: var(--special-dark);
 }
 
 .application h3 {
@@ -293,13 +300,9 @@ img {
   margin-bottom: 50px;
 }
 
-.application-form h2 {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 400;
-  text-align: center;
-  color: var(--basic-white);
-  background-color: var(--special-dark);
+.application-form-content .button {
+  margin-top: 35px;
+  padding: 16px 0;
 }
 
 .application-form h2:hover {
@@ -311,8 +314,24 @@ img {
   background-color: var(--special-dark-focus);
 }
 
+.application-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 15px 0;
+  padding: 0;
+  align-items: center;
+}
+
+.application-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .application-item label {
   line-height: 26px;
+  margin: 0;
+  padding: 0;
 }
 
 .application-item input::placeholder {
@@ -320,9 +339,18 @@ img {
 }
 
 .application-item input {
+  height: 38px;
   line-height: 26px;
   border: 2px solid var(--basic-neutral);
   background-color: var(--basic-neutral);
+}
+
+.application-item-field {
+  width: 346px;
+}
+
+.application-item-counter {
+  width: 114px;
 }
 
 .application-item input:hover {
@@ -361,6 +389,12 @@ img {
   grid-template-columns: 1fr 1fr 2fr;
 }
 
+.filter fieldset {
+  padding: 0;
+  margin: 0 0 30px 0;
+  border: none;
+}
+
 .filter legend {
   font-size: 16px;
   line-height: 21px;
@@ -372,11 +406,16 @@ img {
 
 .filter-price {
   justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .filter .filter-list {
   list-style: none;
   font-weight: 400;
+  padding: 0;
+  margin: 0;
 }
 
 .filter-button {
@@ -409,14 +448,15 @@ img {
 .sorting {
   display: grid;
   grid-template-columns: 1fr 4fr max-content;
+  align-items: center;
   background-color: var(--basic-white);
   padding: 35px 70px;
   margin: 0;
 }
 
 .sorting-options {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
+  align-items: center;
 }
 
 .sorting h2 {
@@ -426,10 +466,16 @@ img {
 
 .sorting-title {
   font-weight: 400;
+  margin-right: 40px;
 }
 
 .sorting-list {
+  display: flex;
+  justify-content: space-between;
+  width: 240px;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sorting-button {
@@ -498,9 +544,20 @@ img {
   opacity: 0.3;
 }
 
-.catalog-item-description {
+.catalog-item-card {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 30px;
+}
+
+.catalog-item-description h3 {
+  margin: 0;
+}
+
+.catalog-item-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .catalog-item-price {
@@ -509,6 +566,13 @@ img {
 
 .catalog-rating {
   justify-self: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.catalog-rating img {
+  align-self: flex-end;
 }
 
 .catalog-rating .catalog-rating-number {
@@ -520,6 +584,7 @@ img {
 .catalog-item-buttons .button {
   font-size: 14px;
   line-height: 21px;
+  padding: 3px 16px;
 }
 
 .catalog-item-button-book {
@@ -576,8 +641,18 @@ img {
 }
 
 /* Social button */
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  padding: 0;
+  margin: 0;
+}
 
 .social-button {
+  display: block;
+  width: 46px;
+  height: 48px;
   color: inherit;
   background-color: var(--special-light);
 }
