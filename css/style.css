@@ -30,6 +30,7 @@
 
   --basic-neutral: #f2f2f2;
   --basic-neutral-light: #666666;
+  --basic-neutral-dark: #A9A9A9;
   --basic-neutral-hover: #ebebeb;
   --basic-neutral-focus: #e5e5e5;
 
@@ -139,6 +140,16 @@ img {
 
 .site-navigation li:nth-child(3n), .site-navigation li:nth-child(4n) {
   justify-self: end;
+}
+
+.site-navigation li:nth-child(3n) {
+  position: relative;
+  left: 87px;
+}
+
+.site-navigation li:nth-child(2) {
+  position: relative;
+  right: 99px;
 }
 
 .site-navigation-link {
@@ -393,6 +404,10 @@ img {
   top: 205px;
 }
 
+.application-form-button {
+  cursor: pointer;
+}
+
 .application-form-content {
   display: flex;
   flex-direction: column;
@@ -462,11 +477,14 @@ img {
 .application-item label {
   line-height: 26px;
   margin: 0;
-  padding: 0;
 }
 
-.application-items label {
+.application-item-label {
   padding-right: 40px;
+}
+
+.application-item-last-label {
+  padding-right: 24px;
 }
 
 .application-item input::placeholder {
@@ -480,15 +498,23 @@ img {
 }
 
 .application-item-field {
-  width: 341px;
+  width: 321px;
   height: 34px;
   line-height: 26px;
   border: 2px solid var(--basic-neutral);
   background-color: var(--basic-neutral);
+  padding: 0 10px 0;
+  font-weight: 700;
+}
+
+.application-item-counter::-webkit-inner-spin-button,
+.application-item-field::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
 }
 
 .application-item-counter {
-  width: 106px;
+  width: 92px;
   text-align: center;
 }
 
@@ -503,6 +529,66 @@ img {
   background-color: var(--basic-white);
 }
 
+.application-item-icon {
+  cursor: pointer;
+}
+
+.application-item-icon:hover path {
+  fill: var(--basic-black);
+}
+
+.application-item-icon:focus path {
+  fill: var(--special-light);
+}
+
+.application-item-icon:focus {
+  outline: none;
+}
+
+.minus, .plus {
+  display: block;
+  width: 12px;
+  height: 3px;
+  background-color: var(--basic-neutral-dark);
+  position: absolute;
+  left: 125px;
+  top: 19px;
+  cursor: pointer;
+}
+
+.minus:hover, .plus:hover, .plus:hover:before {
+  background-color: var(--basic-black);
+}
+
+.minus:focus, .plus:focus, .plus:focus:before {
+  outline: none;
+  background-color: var(--special-light);
+}
+
+.plus {
+  left: 200px;
+}
+
+.item-children .plus {
+  left: 155px;
+}
+
+.item-children .minus {
+  left: 80px;
+}
+
+.plus:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 3px;
+  background-color: var(--basic-neutral-dark);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(90deg);
+}
+
 /* Map */
 
 .map img {
@@ -515,12 +601,9 @@ img {
   background-image: url("../img/background-blur.png");
   background-position: center, 0, 0;
   background-repeat: no-repeat;
-  /*border-bottom: 1px solid var(--basic-black);*/
-  /*filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));*/
-  /*height: 217px;*/
   color: var(--basic-white);
   padding: 26px 72px 39px;
-  margin: 0;
+  margin: 0 0 -7px;
 }
 
 .filter {
@@ -724,7 +807,7 @@ img {
   grid-template-columns: 1fr 5fr max-content;
   align-items: center;
   background-color: var(--basic-white);
-  padding: 5px 72px 13px;
+  padding: 13px 72px;
   margin: 0;
   border-bottom: 1px solid var(--basic-neutral-focus);
 }
@@ -764,6 +847,18 @@ img {
   color: var(--basic-black);
   opacity: 0.3;
   background-color: transparent;
+}
+
+.sorting-list-button:hover {
+  color: var(--special-light);
+  background-color: inherit;
+  opacity: 1;
+}
+
+.sorting-list-button:focus {
+  color: var(--basic-black);
+  background-color: inherit;
+  opacity: 1;
 }
 
 .sorting-buttons {
