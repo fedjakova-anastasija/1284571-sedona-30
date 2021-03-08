@@ -415,7 +415,7 @@ img {
   background-color: #ffffff;
 }
 
-.application-form h2 {
+.application-form-title {
   padding: 30px;
   margin: 0;
   font-size: 21px;
@@ -424,6 +424,7 @@ img {
   text-align: center;
   color: var(--basic-white);
   background-color: var(--special-dark);
+  cursor: pointer;
 }
 
 .application .application-title {
@@ -449,12 +450,13 @@ img {
   font-weight: 700;
 }
 
-.application-form h2:hover {
+.application-form-title:hover {
   background-color: var(--special-dark-hover);
 }
 
-.application-form h2:focus {
-  opacity: 0.3;
+.application-form-title:active {
+  color: rgba(var(--basic-white-rgb), 0.3);
+  outline: none;
   background-color: var(--special-dark-focus);
 }
 
@@ -491,7 +493,7 @@ img {
   color: var(--basic-black);
 }
 
-.application-item svg {
+.application-item-icon {
   position: absolute;
   right: 8px;
   top: 7px;
@@ -537,44 +539,24 @@ img {
   fill: var(--basic-black);
 }
 
-.application-item-icon:focus path {
+.application-item-icon:active path {
   fill: var(--special-light);
 }
 
-.application-item-icon:focus {
-  outline: none;
+.counter:hover path, .counter:hover rect {
+  fill: var(--basic-black);
 }
 
-.minus, .plus {
-  display: block;
-  width: 12px;
-  height: 3px;
-  background-color: var(--basic-neutral-dark);
-  position: absolute;
-  left: 125px;
-  top: 19px;
-  cursor: pointer;
-}
-
-.minus:hover, .plus:hover, .plus:hover:before {
-  background-color: var(--basic-black);
-}
-
-.minus:focus, .plus:focus, .plus:focus:before {
-  outline: none;
-  background-color: var(--special-light);
-}
-
-.plus {
-  left: 200px;
+.counter:active path, .counter:active rect {
+  fill: var(--special-light);
 }
 
 .item-children .plus {
-  left: 155px;
+  left: 140px;
 }
 
 .item-children .minus {
-  left: 80px;
+  left: 62px;
 }
 
 .plus:before {
@@ -587,6 +569,22 @@ img {
   left: 0;
   top: 0;
   transform: rotate(90deg);
+}
+
+.counter {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+}
+
+.minus {
+  left: 111px;
+  padding: 17px;
+}
+
+.plus {
+  left: 188px;
+  padding: 13px;
 }
 
 /* Map */

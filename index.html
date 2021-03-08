@@ -102,7 +102,7 @@
     <p class="application-info">Укажите предполагаемые даты поездки, <br> и мыпокажем вам лучшие предложения гостиниц в
       Седоне</p>
     <form class="application-form" action="https://echo.htmlacademy.ru" method="post">
-      <h2>Пoиск гостиницы в Седоне</h2>
+      <h2 class="application-form-title">Пoиск гостиницы в Седоне</h2>
       <div class="application-form-content">
         <p class="application-item">
           <label for="search-arrival-date">Дата заезда:</label>
@@ -131,17 +131,33 @@
         <div class="application-items">
           <p class="application-item item-adults">
             <label class="application-item-label" for="search-adults">Взрослые:</label>
-            <span class="minus"></span>
+            <svg class="counter minus" width="12" height="3" viewBox="0 0 12 3" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <rect width="12" height="3" fill="#A9A9A9"/>
+            </svg>
             <input class="application-item-field application-item-counter" id="search-adults" type="number"
                    name="adults" placeholder="2">
-            <span class="plus"></span>
+            <svg class="counter plus" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                    fill="#A9A9A9"/>
+            </svg>
           </p>
           <p class="application-item item-children">
             <label class="application-item-last-label" for="search-children">Дети:</label>
-            <span class="minus"></span>
+            <svg class="counter minus" width="12" height="3" viewBox="0 0 12 3" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <rect width="12" height="3" fill="#A9A9A9"/>
+            </svg>
             <input class="application-item-field application-item-counter" id="search-children" type="number"
                    name="children" placeholder="0">
-            <span class="plus"></span>
+            <svg class="counter plus" width="11" height="11" viewBox="0 0 11 11" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                    fill="#A9A9A9"/>
+            </svg>
           </p>
         </div>
         <button class="application-form-button button" type="submit"><span class="button-name">Найти</span></button>
