@@ -10,7 +10,7 @@
   <link rel="manifest" href="manifest.webmanifest">
 
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body class="page-body inner-page">
 <header class="main-header">
@@ -35,7 +35,7 @@
 
   <section class="filters">
     <h2 class="visually-hidden">Фильтр гостиниц</h2>
-    <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+    <form class="filter" method="get" action="https://echo.htmlacademy.ru" target="_blank">
       <fieldset>
         <legend>Инфраструктура:</legend>
         <ul class="filter-list">
@@ -87,7 +87,7 @@
             <div class="toggle toggle-max" tabindex="0"></div>
           </div>
         </div>
-        <button class="filter-button button" type="submit">Показать</button>
+        <button class="filter-button button" type="submit" aria-label="Вывести выбранные инфраструктуры и типы жилья">Показать</button>
       </fieldset>
     </form>
   </section>

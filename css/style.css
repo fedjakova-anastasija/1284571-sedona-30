@@ -92,7 +92,6 @@ img {
 
 .page-inner-content {
   background-color: var(--basic-white);
-  padding: 35px 70px;
 }
 
 /* Main navigation */
@@ -516,8 +515,10 @@ img {
 }
 
 .application-item-counter {
-  width: 92px;
   text-align: center;
+  padding: 0 43px;
+  width: 27px;
+  text-overflow: ellipsis;
 }
 
 .application-item input:hover {
@@ -591,6 +592,10 @@ img {
 
 .map img {
   background-color: var(--basic-extra-light);
+}
+
+.map-iframe {
+  border: 0;
 }
 
 /* Filters */
@@ -796,6 +801,8 @@ img {
   background: none;
   font-family: inherit;
   font-size: inherit;
+  outline: none;
+  text-overflow: ellipsis;
 }
 
 /* Sorting */
@@ -845,6 +852,7 @@ img {
   color: var(--basic-black);
   opacity: 0.3;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .sorting-list-button:hover {
@@ -868,6 +876,7 @@ img {
   padding: 0;
   margin: 0;
   background-color: inherit;
+  cursor: pointer;
 }
 
 .sorting-button-close {
