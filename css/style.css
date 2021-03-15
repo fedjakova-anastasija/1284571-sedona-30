@@ -27,6 +27,7 @@
   --basic-extra-light: #eeeeee;
   --basic-white: #ffffff;
   --basic-white-rgb: 255, 255, 255;
+  --basic-black-rgb: 0, 0, 0;
 
   --basic-neutral: #f2f2f2;
   --basic-neutral-light: #666666;
@@ -111,7 +112,7 @@ img {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  box-shadow: 0 5px 15px 0 rgba(var(--basic-black-rgb), 0.2);
 }
 
 /* Logo */
@@ -412,6 +413,7 @@ img {
   flex-direction: column;
   padding: 55px;
   background-color: #ffffff;
+  opacity: 0;
 }
 
 .application-form-title {
@@ -586,6 +588,11 @@ img {
 .plus {
   left: 188px;
   padding: 13px;
+}
+
+.show-form {
+  opacity: 1;
+  transition: 2s;
 }
 
 /* Map */
@@ -773,7 +780,7 @@ img {
   background: none;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
-  padding: 0 50px;
+  padding: 0 25px 0 50px;
   align-items: center;
 }
 
@@ -781,7 +788,7 @@ img {
   height: 22px;
   width: 2px;
   background-color: var(--basic-white);
-  margin-left: 5px;
+  margin-right: 20px;
 }
 
 .price-controls label {
@@ -973,6 +980,9 @@ img {
 .catalog-item-price {
   font-weight: 400;
   margin-bottom: 18px;
+  display: flex;
+  width: 178px;
+  justify-content: space-between;
 }
 
 .catalog-rating {
