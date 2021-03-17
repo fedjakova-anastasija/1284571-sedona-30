@@ -1,3 +1,5 @@
+'use strict'
+
 const form = document.querySelector(".application-form");
 const formTitle = document.querySelector(".application-form-title");
 const formContent = document.querySelector(".application-form-content");
