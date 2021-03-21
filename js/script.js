@@ -1,7 +1,7 @@
-'use strict'
+//'use strict'
 
 const form = document.querySelector(".application-form");
-const formTitle = document.querySelector(".application-form-title");
+const formLink = document.querySelector(".application-form-link");
 const formContent = document.querySelector(".application-form-content");
 const formArrivalDate = document.querySelector("#search-arrival-date");
 const formAdultsCount = document.querySelector("#search-adults");
@@ -18,17 +18,22 @@ try {
   isStorageSupport = false;
 }
 
-formTitle.addEventListener("click", function () {
-  formContent.classList.toggle("show-form");
-  formArrivalDate.focus();
+formLink.addEventListener("click", function () {
+  showForm();
+})
 
-  formAdultsCount.value = storageFormAdultsCount;
-  formChildrenCount.value = storageFormChildrenCount;
+formLink.addEventListener("keyup", function(evt) {
+  if (evt.keyCode === 13) {
+    showForm();
+  }
 })
 
 form.addEventListener("submit", function (evt) {
   if (!formAdultsCount.value || !formChildrenCount.value) {
     evt.preventDefault();
+    form.classList.remove("application-form-error");
+    form.offsetWidth = form.offsetWidth;
+    form.classList.add("application-form-error");
   } else if (isStorageSupport) {
     if (formAdultsCount.value) {
       localStorage.setItem("formAdultsCount", formAdultsCount.value);
@@ -38,3 +43,11 @@ form.addEventListener("submit", function (evt) {
     }
   }
 });
+
+function showForm() {
+  formContent.classList.toggle("show-form");
+  formArrivalDate.focus();
+
+  formAdultsCount.value = storageFormAdultsCount;
+  formChildrenCount.value = storageFormChildrenCount;
+}

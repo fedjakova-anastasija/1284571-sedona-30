@@ -149,11 +149,11 @@ img {
 }
 
 .site-navigation-item:first-child .site-navigation-link {
-  padding-left: 72px;
+  margin-left: 72px;
 }
 
 .site-navigation-item:last-child .site-navigation-link {
-  padding-right: 72px;
+  margin-right: 72px;
 }
 
 .site-navigation-link {
@@ -265,7 +265,7 @@ img {
 }
 
 .feature-item img {
-  background-color: var(--basic-extra-light);
+  background-color: var(--special-light);
 }
 
 .feature-description {
@@ -522,7 +522,7 @@ img {
   -webkit-appearance: none;
 }
 
-input[type=number] {
+input[type=number]:not(:focus) {
   -moz-appearance:textfield;
 }
 
@@ -605,6 +605,10 @@ input[type=number] {
   transition: 0.6s;
 }
 
+.application-form-error {
+  animation: shake 0.6s;
+}
+
 /* Map */
 
 .map {
@@ -622,7 +626,7 @@ input[type=number] {
 
 .filters {
   background-image: url("../img/background-blur.png");
-  background-position: center, 0, 0;
+  background-position: top, 0, 0;
   background-repeat: no-repeat;
   color: var(--basic-white);
   padding: 26px 72px 39px;
@@ -712,6 +716,10 @@ input[type=number] {
   border: 2px solid var(--basic-white);
   border-radius: 3px;
   left: -40px;
+}
+
+.filter-input:focus + label::before {
+  outline: auto;
 }
 
 .filter-input:checked + label::after {
@@ -874,14 +882,14 @@ input[type=number] {
 .sorting-list {
   display: flex;
   justify-content: space-between;
-  width: 239px;
+  width: 238px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .sorting-list li {
-  margin: -14px 0;
+  margin: -13px 0;
 }
 
 .sorting-list-button {
@@ -906,7 +914,7 @@ input[type=number] {
   color: var(--basic-black);
   background-color: inherit;
   opacity: 1;
-  border-bottom: 1px dashed var(--basic-white);
+  margin-top: -1px;
 }
 
 .sorting-buttons {
@@ -939,6 +947,7 @@ input[type=number] {
   font-size: 12px;
   line-height: 18px;
   opacity: 1;
+  margin-top: -1px;
 }
 
 .sorting-button:hover path {
@@ -946,11 +955,7 @@ input[type=number] {
 }
 
 .sorting-button:focus path {
-  fill: var(--special-light);
-}
-
-.sorting-button:focus {
-  outline: none;
+    fill: var(--special-light);
 }
 
 /* Catalog */
@@ -1182,6 +1187,10 @@ input[type=number] {
 
 @-moz-document url-prefix()
 {
+  input[type=number]:focus {
+    width: 70px;
+  }
+
   .feature-title {
     max-width: 151px;
   }
@@ -1200,5 +1209,28 @@ input[type=number] {
 
   .price-controls {
     padding-right: 39px;
+  }
+}
+
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
