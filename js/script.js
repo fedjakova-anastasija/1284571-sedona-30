@@ -29,7 +29,7 @@ formLink.addEventListener("keyup", function(evt) {
 })
 
 form.addEventListener("submit", function (evt) {
-  if (!formAdultsCount.value || !formChildrenCount.value) {
+  if (Number(formAdultsCount.value) <= 0 || Number(formChildrenCount.value) < 0) {
     evt.preventDefault();
     form.classList.remove("application-form-error");
     form.offsetWidth = form.offsetWidth;
